@@ -1,0 +1,47 @@
+  @import "tailwindcss";
+
+  /* src/index.css */
+@import "tailwindcss";
+
+/* 100% Working Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+  /* frontend/src/index.css */
+
+/* ... උඩින් තියෙන Tailwind imports ටික එහෙමම තියන්න ... */
+
+/* Moving Neon Border එක සඳහා හෙමින් කැරකෙන ඇනිමේෂන් එක */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+/* Seamless Loop Animation */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* ලිස්ට් එකෙන් හරියටම බාගයක් ගියාම ආයේ මුලට එනවා */
+  }
+}
+
+.animate-scroll-infinite {
+  display: flex;
+  width: max-content; /* content එකේ දිගටම container එක හැදෙන්න */
+  animation: scroll-infinite 30s linear infinite;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused; /* Mouse එක තිබ්බම නවතින්න */
+}
