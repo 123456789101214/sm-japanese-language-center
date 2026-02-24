@@ -14,7 +14,7 @@ const UploadWorks = () => {
 
     const handleUpload = async (e) => {
         e.preventDefault();
-        if (!file) return Swal.fire('Error', 'කරුණාකර ෆයිල් එකක් තෝරන්න', 'error');
+        if (!file) return Swal.fire('Error', 'Please select a file', 'error');
 
         setLoading(true);
         try {
@@ -68,7 +68,7 @@ const UploadWorks = () => {
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-10">
                     <h1 className="text-4xl font-black text-gray-900 mb-3">Homework Submission</h1>
-                    <p className="text-gray-500 font-medium">ඔබේ ගෙදර වැඩ විධිමත්ව මෙතැනින් ඉදිරිපත් කරන්න.</p>
+                    <p className="text-gray-500 font-medium">Please fill out the form below to submit your homework</p>
                 </div>
 
                 <form onSubmit={handleUpload} className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-gray-100 space-y-6">
