@@ -59,7 +59,7 @@ const AdminDashboard = () => {
     const deleteStudent = async (id, name) => {
         const result = await Swal.fire({
             title: 'Are you sure?',
-            text: `${name} 's details will be hidden from the dashboard.`,
+            text: `${name} 's details will be deleted from the dashboard.`,
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#d33',
@@ -76,7 +76,7 @@ const AdminDashboard = () => {
             if (error) {
                 Swal.fire('Error', 'Failed to remove student', 'error');
             } else {
-                Swal.fire('Removed!', 'Student hidden successfully.', 'success');
+                Swal.fire('Removed!', 'Student deleted successfully.', 'success');
                 fetchStudents();
             }
         }
